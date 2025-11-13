@@ -32,15 +32,22 @@
 	            <goal>deploy</goal>
 	          </goals>
 	          <configuration>
-	            <target>cloudhub</target>
-	            <username>nb799</username>
-	            <password>BBnik667!!</password>
-	            <applicationName>sample-one</applicationName>
-	            <region>us-east-1</region>
-	            <workers>1</workers>
-	            <workerSize>0.2</workerSize>
-	            <autoUpdate>true</autoUpdate>
-	          </configuration>
+                    <cloudhub2Deployment>
+				      <uri>https://anypoint.mulesoft.com</uri>
+				      <muleVersion>${app.runtime}</muleVersion>
+				      <username>nb799</username>
+				      <password>BBnik667!!</password>
+				      <applicationName>sample-one</applicationName>
+				      <environment>Sandbox</environment>
+                      <replicas>1</replicas>
+                      <vCores>0.1</vCores>
+                      <provider>MC</provider>
+                       <target>Cloudhub-US-East-2</target>
+				      <properties>
+				        <key>value</key>
+				      </properties>
+				    </cloudhub2Deployment>
+				</configuration>
 	        </execution>
 	      </executions>
 	    </plugin>
